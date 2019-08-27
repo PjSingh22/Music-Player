@@ -13,3 +13,119 @@
   margin: 0;
   box-sizing: border-box;
 }
+body {
+  font-family: var(--font-main-stack);
+  line-height: 1.5;
+}
+.button {
+  padding: 1rem 3.8rem;
+  border-radius: 3.4rem;
+  text-transform: uppercase;
+  border: 0;
+  outline: 0;
+  opacity: 0.9;
+  transition: 0.1s all ease;
+}
+.button:hover {
+  opacity: 1;
+  transform:  scale(1.1);
+}
+.button.is-green {
+  background: var(--light-green);
+  color: var(--main-font-color);
+}
+.app {
+  background: linear-gradient(to bottom, #7d182f, #100206);
+  height: 100%;
+}
+/* Track-bar Style */
+.track-bar {
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  background-color: black;
+  transition: 0.1s all ease;
+}
+.track-bar__fill {
+  height: 6px;
+  width: 0%;
+  background-color: var(--light-green);
+}
+/* Music player styles */
+.player {
+  display: flex;
+  height: 100vh;
+}
+.player__header {
+  flex: 1;
+  padding: 1.4rem;
+}
+.player__img {
+  width: 70%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+.player__details {
+  text-align: center;
+}
+.player__name {
+  color: var(--main-font-color);
+}
+.player__count-wrapper {
+  color: var(--secondary-font-color);
+  text-transform: uppercase;
+}
+.player__body {
+  flex: 2;
+}
+.player__trigger {
+  margin: 1.4rem 0;
+}
+/* player body */
+.player__body {
+  flex: 2;
+  padding: 1.4rem 0;
+}
+.playlist {
+  list-style-type: none;
+  height: 100%;
+  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.playlist__song {
+  display: flex;
+  padding: 0.78rem 1rem;
+  transition: 0.3s all ease;
+}
+.playlist__song:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+.playlist__song--active {
+  color: var(--light-green);
+}
+.playlist__song--active div {
+  color: inherit;
+}
+.play-pause {
+  color: var(--main-font-color);
+  margin-right: 20px;
+}
+.playlist__song-name {
+  color: var(--main-font-color);
+}
+.playlist__song-artist {
+  color: var(--secondary-font-color);
+}
+.playlist__song-duration {
+  margin-left: auto;
+  color: var(--secondary-font-color);
+}
+ @media only screen and (max-width: 768px) {
+  .player {
+    display: block;
+    height: 100%;
+  }
+}
