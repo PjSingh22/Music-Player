@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+:root {
+  --main-bg-color: #1A1A1A;
+  --main-font-color: white;
+  --secondary-font-color: #eee;
+  --light-green: #33b75c;
+  --container-width: 768px;
+  --font-main-stack: Quicksand, sans-serif;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
