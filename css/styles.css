@@ -93,7 +93,7 @@ body {
   height: 100%;
   overflow: scroll;
   overflow-x: hidden;
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
 }
 .playlist__song {
   display: flex;
@@ -104,6 +104,7 @@ body {
   background: rgba(0, 0, 0, 0.3);
 }
 .playlist__song--active {
+  background: rgba(0, 0, 0, 0.3);
   color: var(--light-green);
 }
 .playlist__song--active div {

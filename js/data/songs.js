@@ -51,7 +51,7 @@ export const songsList = [{
     "id": "8",
     "url": "../../music/dilemma.mp3",
     "time": "04:42",
-    "title": "Nelly Dilemma ft. keylly Rowland",
+    "title": "Nelly Dilemma ft. kelly Rowland",
     "artist": "Nelly"
   },
   {
