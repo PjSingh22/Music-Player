@@ -1,22 +1,29 @@
 'use strict';
-import {
-  songsList
-} from '../data/songs.js';
+import PlayInfo from './play-info.js';
+import { songsList } from '../data/songs.js';
+import TrackBar from './track-bar.js';
+
 const Playlist = (_ => {
   //cache the DOM
   const playlistEl = document.querySelector('.playlist');
   //data or state
   let songs = songsList;
-  let currentlyPlayingIndex = 3;
+  let currentlyPlayingIndex = 0;
   let currentSong = new Audio(songs[currentlyPlayingIndex].url);
-  let isPlaying = false;
-
-  currentSong.currentTime = 255;
 
   const init = _ => {
     render();
     listeners();
+    PlayInfo.setState({
+      songsLength: songs.length,
+      isPlaying: !currentSong.paused
+    })
   };
+
+  const flip = _ => {
+    togglePlayPause();
+    render();
+  }
 
   const changeAudioSource = _ => {
     currentSong.src = songs[currentlyPlayingIndex].url;
@@ -29,22 +36,24 @@ const Playlist = (_ => {
   const mainPlay = clickedIndex => {
     if (currentlyPlayingIndex === clickedIndex) {
       //toggle play or pause
-      console.log('same song clicked');
       togglePlayPause();
     } else {
-      console.log('new song clicked');
       currentlyPlayingIndex = clickedIndex
       changeAudioSource();
       togglePlayPause();
     }
+    PlayInfo.setState({
+      songsLength: songs.length,
+      isPlaying: !currentSong.paused
+    });
   };
 
   const playNext = _ => {
-    if(songs[currentlyPlayingIndex + 1]) {
+    if (songs[currentlyPlayingIndex + 1]) {
       currentlyPlayingIndex++;
       changeAudioSource();
       togglePlayPause();
-      render(); 
+      render();
     }
   }
 
@@ -53,10 +62,12 @@ const Playlist = (_ => {
       if (event.target && event.target.matches('.fa')) {
         const listElem = event.target.parentNode.parentNode;
         const listElemIndex = [...listElem.parentElement.children].indexOf(listElem);
-        console.log(listElemIndex);
         mainPlay(listElemIndex);
         render();
       }
+    });
+    currentSong.addEventListener('timeupdate', _ => {
+      TrackBar.setState(currentSong);
     });
     currentSong.addEventListener('ended', _ => {
       playNext();
@@ -93,7 +104,8 @@ const Playlist = (_ => {
   };
 
   return {
-    init
+    init,
+    flip
   };
 })();
 
