@@ -14,10 +14,10 @@ export const songsList = [{
   },
   {
     "id": "3",
-    "url": "../../music/professional-rapper.mp3",
-    "time": "05:52",
-    "title": "Professional Rapper ft. Snoop Dog",
-    "artist": "Lil Dicky"
+    "url": "../../music/Candyman.mp3",
+    "time": "02:58",
+    "title": "CandyMan",
+    "artist": "Zedd"
   },
   {
     "id": "4",
@@ -35,10 +35,10 @@ export const songsList = [{
   },
   {
     "id": "6",
-    "url": "../../music/shape-of-my-heart.mp3",
-    "time": "04:43",
-    "title": "Shape Of My Heart",
-    "artist": "Sting"
+    "url": "../../music/boyfriend.mp3",
+    "time": "03:06",
+    "title": "boyfriend",
+    "artist": "Ariana Grande"
   },
   {
     "id": "7",
@@ -77,9 +77,9 @@ export const songsList = [{
   },
   {
     "id": "12",
-    "url": "../../music/sad.mp3",
-    "time": "02:46",
-    "title": "Sad",
-    "artist": "XXXtentacion"
+    "url": "../../music/Dapper.mp3",
+    "time": "03:13",
+    "title": "Dapper ft. Anderson Paak",
+    "artist": "Domo Genesis"
   },
 ];
