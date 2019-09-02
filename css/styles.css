@@ -4,7 +4,7 @@
   --main-bg-color: #1A1A1A;
   --main-font-color: white;
   --secondary-font-color: #eee;
-  --light-green: #33b75c;
+  --light-blue: rgb(75,172,225);
   --container-width: 768px;
   --font-main-stack: Quicksand, sans-serif;
 }
@@ -31,7 +31,7 @@ body {
   transform:  scale(1.1);
 }
 .button.is-green {
-  background: var(--light-green);
+  background: var(--light-blue);
   color: var(--main-font-color);
 }
 .app {
@@ -50,7 +50,7 @@ body {
 .track-bar__fill {
   height: 6px;
   width: 0%;
-  background-color: var(--light-green);
+  background-color: var(--light-blue);
 }
 /* Music player styles */
 .player {
@@ -62,7 +62,7 @@ body {
   padding: 1.4rem;
 }
 .player__img {
-  width: 70%;
+  width: 60%;
   height: auto;
   display: block;
   margin: 0 auto;
@@ -104,7 +104,7 @@ body {
 }
 .playlist__song--active {
   background: rgba(0, 0, 0, 0.3);
-  color: var(--light-green);
+  color: var(--light-blue);
 }
 .playlist__song--active div {
   color: inherit;
